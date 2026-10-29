@@ -1,0 +1,615 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#1457d9" />
+  <meta name="description" content="Electronic Sathi — learn electronics, practise viva questions, build projects, and get study help." />
+  <title>Electronic Sathi | Learn • Build • Succeed</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+:root{--blue:#1457d9;--blue-dark:#1046b6;--blue-deep:#0b2d73;--blue-soft:#eaf2ff;--ink:#18243a;--muted:#68758d;--line:#e5eaf3;--surface:#fff;--soft:#f6f9ff;--teal:#28c6ba;--shadow:0 18px 55px rgba(29,64,126,.09);--radius:22px}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:88px}body{margin:0;background:#fff;color:var(--ink);font-family:'DM Sans',sans-serif;font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased}button,input{font:inherit}button,a{-webkit-tap-highlight-color:transparent}button{cursor:pointer}a{color:inherit;text-decoration:none}.container{width:min(1160px,calc(100% - 48px));margin-inline:auto}.section{padding:96px 0}.section-soft{background:linear-gradient(180deg,#f7faff 0%,#f5f8ff 100%)}.skip-link{position:absolute;left:-999px;top:6px;z-index:1000;padding:12px;background:white}.skip-link:focus{left:6px}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.site-header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(16px);border-bottom:1px solid rgba(226,233,245,.8)}.nav-wrap{height:80px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:inline-flex;align-items:center;gap:10px;flex-shrink:0}.brand-mark{width:43px;height:43px;display:grid;place-items:center;border-radius:14px;background:linear-gradient(145deg,#1c67f2,#1043bf);box-shadow:0 8px 18px rgba(20,87,217,.19)}.brand-mark svg{width:31px;height:31px;stroke:white;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;fill:none}.brand-mark circle{fill:#fff;stroke:none}.brand-copy{display:flex;flex-direction:column;line-height:1.12}.brand-copy strong{font-family:Manrope,sans-serif;font-size:17px;font-weight:800;letter-spacing:-.55px}.brand-copy em{font-style:normal;color:var(--blue)}.brand-copy small{margin-top:5px;color:#7a869c;font-size:10px;letter-spacing:1.15px;text-transform:uppercase;font-weight:700}.main-nav{display:flex;align-items:center;gap:31px}.nav-link{position:relative;color:#5e6c83;font-size:13px;font-weight:700;transition:color .2s}.nav-link:hover,.nav-link.active{color:var(--blue)}.nav-link.active:after{content:'';height:2px;width:18px;background:var(--blue);position:absolute;bottom:-10px;left:0;border-radius:3px}.nav-login{display:flex;align-items:center;gap:8px;border:1px solid #dfe7f5;background:#fff;color:var(--blue);font-weight:700;font-size:13px;border-radius:12px;padding:11px 17px;transition:.2s}.nav-login:hover{background:var(--blue-soft);border-color:#c4d8ff}.user-icon{font-size:18px;line-height:1}.menu-toggle{display:none;background:none;border:0;padding:8px}.menu-toggle span{display:block;width:22px;height:2px;margin:5px;background:var(--ink);border-radius:3px}
+.hero{padding:80px 0 80px;overflow:hidden}.hero-grid{display:grid;grid-template-columns:1.02fr .98fr;align-items:center;gap:42px}.eyebrow{display:flex;align-items:center;gap:9px;color:var(--blue);font-size:10px;letter-spacing:1.65px;font-weight:800}.eyebrow-dot{width:7px;height:7px;border-radius:50%;background:var(--teal);box-shadow:0 0 0 4px #dffaf7}.hero h1,.section-heading h2,.ai-copy h2,.cta-inner h2{font-family:Manrope,sans-serif;letter-spacing:-2.6px;font-weight:800}.hero h1{font-size:clamp(46px,5.4vw,70px);line-height:1.08;margin:24px 0 19px}.hero h1 span,.section-heading h2 span,.ai-copy h2 span{color:var(--blue)}.hero-lead{max-width:485px;color:var(--muted);font-size:16px;line-height:1.85;margin:0}.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:29px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:14px;min-height:48px;padding:0 20px;border-radius:12px;border:1px solid transparent;font-size:13px;font-weight:800;transition:transform .2s,box-shadow .2s,background .2s}.btn:hover{transform:translateY(-2px)}.btn-primary{background:var(--blue);color:white;box-shadow:0 9px 20px rgba(20,87,217,.18)}.btn-primary:hover{background:var(--blue-dark);box-shadow:0 11px 24px rgba(20,87,217,.25)}.btn-secondary{background:white;color:#32415c;border-color:#e1e8f3}.btn-secondary:hover{border-color:#b7ccf7;background:#f9fbff}.btn span{font-size:17px}.hero-proof{display:flex;align-items:center;gap:14px;margin-top:38px}.avatar-stack{display:flex;padding-left:3px}.avatar-stack span{width:31px;height:31px;display:grid;place-items:center;margin-left:-4px;border:2px solid white;border-radius:50%;background:#dce9ff;color:#285cc2;font-weight:800;font-size:12px}.avatar-stack span:nth-child(2){background:#d6f7f1;color:#168c84}.avatar-stack span:nth-child(3){background:#fce8cf;color:#b8791c}.hero-proof p{font-size:11px;line-height:1.55;margin:0;color:var(--muted)}.hero-proof strong{color:#273854;font-size:12px}.hero-art{height:440px;position:relative;display:flex;align-items:center;justify-content:center;isolation:isolate}.art-glow{position:absolute;width:350px;height:350px;border-radius:50%;background:radial-gradient(circle,rgba(61,130,255,.16),rgba(91,163,255,.08) 48%,transparent 70%);filter:blur(3px)}.hero-art:before{content:'';position:absolute;inset:27px 4px;border:1px dashed #cfdefa;border-radius:40px;transform:rotate(-7deg);z-index:-1}.circuit-lines{position:absolute;width:100%;height:100%;stroke:#c2d8ff;stroke-width:2;stroke-dasharray:4 7;z-index:-1}.circuit-lines circle{fill:#fff;stroke:var(--blue);stroke-width:2}.art-chip{position:absolute;border:1px solid #dce6f9;background:#fff;box-shadow:0 20px 60px rgba(38,81,155,.13);border-radius:23px}.chip-main{width:204px;height:232px;top:92px;left:calc(50% - 102px);display:flex;align-items:center;justify-content:center;flex-direction:column;background:linear-gradient(145deg,#fff,#f8fbff)}.chip-label{font:800 10px Manrope,sans-serif;color:#6a85b5;letter-spacing:2px}.chip-core{width:106px;height:106px;margin:16px 0 13px;border:5px solid #d8e5fc;border-radius:22px;background:linear-gradient(145deg,#2065e5,#0e3ca9);display:grid;grid-template-columns:repeat(3,1fr);align-content:center;justify-items:center;gap:9px;padding:16px;box-shadow:inset 0 0 0 1px #8bb3ff,0 12px 22px rgba(20,87,217,.2)}.chip-core i{height:8px;width:8px;border:1px solid #a6dfff;border-radius:2px;background:#e4f9ff;box-shadow:0 0 9px #82d8ff}.chip-caption{font-size:9px;font-weight:800;color:#8294b5;letter-spacing:1.3px}.chip-small{width:126px;height:79px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px}.chip-small small{color:#98a5ba;font-size:8px;font-weight:800;letter-spacing:1px}.mini-wave{font-size:21px;line-height:1;color:var(--blue)}.mini-resistor{font-size:22px;line-height:1;color:#20bcae}.chip-one{top:56px;right:8%}.chip-two{bottom:81px;left:7%}.art-node{position:absolute;width:9px;height:9px;border:2px solid var(--blue);background:#fff;border-radius:50%;box-shadow:0 0 0 5px #e5efff}.node-a{left:12%;top:150px}.node-b{right:12%;bottom:116px}.node-c{right:21%;top:39px;width:6px;height:6px}.float-pill{position:absolute;display:flex;align-items:center;gap:10px;padding:12px 15px;border-radius:15px;background:white;border:1px solid #edf1f9;box-shadow:0 14px 34px rgba(30,66,126,.12)}.float-pill b{display:block;font-size:11px;color:#243651}.float-pill small{display:block;color:#8a97ab;font-size:9px;margin-top:2px}.float-viva{top:244px;left:0}.float-project{bottom:26px;right:0}.float-icon{width:30px;height:30px;display:grid;place-items:center;border-radius:10px;color:#12a595;background:#dcfbf4;font-size:17px;font-weight:800}.float-icon.blue{background:#e5efff;color:var(--blue)}.art-bottom-note{position:absolute;bottom:-6px;left:50%;transform:translateX(-50%);font-size:8px;letter-spacing:2px;font-weight:800;color:#9aabc5;white-space:nowrap}.signal-dot,.live-dot{display:inline-block;width:6px;height:6px;background:var(--teal);border-radius:50%;margin-right:6px}
+.quick-stats{border-block:1px solid #edf1f7;background:white}.stats-grid{min-height:105px;display:grid;grid-template-columns:repeat(4,1fr);align-items:center}.stat-item{display:flex;align-items:center;gap:13px;padding:10px 24px;border-right:1px solid var(--line)}.stat-item:first-child{padding-left:0}.stat-item:last-child{border:0}.stat-icon{width:42px;height:42px;flex-shrink:0;display:grid;place-items:center;border-radius:13px;background:#edf4ff;color:var(--blue);font-size:22px;font-weight:700}.stat-item strong{display:block;font-family:Manrope,sans-serif;font-size:12px;font-weight:800}.stat-item small{display:block;margin-top:3px;color:#8290a7;font-size:10px}
+.section-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:39px}.section-heading h2,.ai-copy h2{font-size:clamp(30px,3.4vw,42px);line-height:1.2;margin:12px 0 10px;letter-spacing:-1.6px}.section-heading p,.ai-copy>p{color:var(--muted);font-size:13px;margin:0;line-height:1.8}.heading-tag{display:flex;align-items:center;gap:8px;white-space:nowrap;margin-bottom:7px;padding:9px 12px;border:1px solid #e6edf9;border-radius:10px;color:#6c7b93;font-size:9px;letter-spacing:1.1px;font-weight:800}.tag-dot{width:6px;height:6px;background:#20bfae;border-radius:50%}.viva-layout{display:grid;grid-template-columns:315px minmax(0,1fr);gap:23px;align-items:stretch}.card-panel{background:#fff;border:1px solid #e6edf8;border-radius:20px;box-shadow:0 12px 35px rgba(29,64,126,.035)}.viva-sidebar{padding:25px 19px;display:flex;flex-direction:column}.viva-sidebar h3{margin:0;font-family:Manrope,sans-serif;font-size:16px;letter-spacing:-.4px}.small-muted{margin:4px 0 21px;font-size:11px;color:#8a97ab}.subject-list{display:grid;gap:7px}.subject-option{display:grid;grid-template-columns:34px 1fr auto;align-items:center;gap:11px;width:100%;padding:11px;border:1px solid transparent;background:transparent;border-radius:12px;text-align:left;color:#32415a;transition:.2s}.subject-option:hover{background:#f8faff}.subject-option.selected{border-color:#dce8ff;background:#f0f5ff}.subject-symbol{width:34px;height:34px;display:grid;place-items:center;border-radius:10px;background:#f0f4fc;color:#5a75a5;font-size:17px;font-weight:800}.subject-option.selected .subject-symbol{background:var(--blue);color:white}.subject-option b{display:block;font-size:11px;font-weight:800}.subject-option small{display:block;font-size:9px;color:#8b98ad;margin-top:2px}.subject-arrow{color:#9cadc7;font-size:15px}.subject-option.selected .subject-arrow{color:var(--blue)}.sidebar-tip{display:flex;align-items:flex-start;gap:11px;border-top:1px solid #edf1f7;margin-top:auto;padding:20px 4px 0}.sidebar-tip>span{width:26px;height:26px;flex-shrink:0;display:grid;place-items:center;background:#fff5df;color:#c68e20;border-radius:9px}.sidebar-tip p{font-size:10px;color:#8995a8;line-height:1.55;margin:0}.sidebar-tip b{color:#42516b;font-size:11px}.quiz-panel{position:relative;padding:27px 30px;min-height:425px;display:flex;flex-direction:column;overflow:hidden}.quiz-topline{display:flex;align-items:center;justify-content:space-between;gap:10px}.quiz-label{font-size:9px;color:#567092;font-weight:800;letter-spacing:1.15px}.question-counter{color:#8795a9;font-size:9px;font-weight:800;letter-spacing:1px}.progress-track{height:5px;background:#edf2fa;border-radius:9px;overflow:hidden;margin:14px 0 25px}.progress-track span{display:block;height:100%;background:linear-gradient(90deg,#1e67ec,#55a3ff);border-radius:9px;transition:width .3s}.question-topic{font-size:9px;font-weight:800;letter-spacing:1.3px;color:var(--blue)}.question-area h3{font-family:Manrope,sans-serif;font-size:19px;line-height:1.5;letter-spacing:-.4px;margin:8px 0 18px;max-width:650px}.answer-list{display:grid;grid-template-columns:1fr 1fr;gap:10px}.answer-option{display:flex;align-items:center;text-align:left;gap:10px;padding:12px 13px;min-height:49px;border:1px solid #e5ebf4;background:#fff;border-radius:11px;color:#53617a;font-size:11px;font-weight:600;transition:.18s}.answer-option:hover:not(:disabled){border-color:#9bbcff;background:#f8fbff}.answer-letter{width:24px;height:24px;display:grid;place-items:center;border:1px solid #dce5f2;border-radius:7px;color:#7d8da7;font-size:10px;font-weight:800;flex-shrink:0}.answer-option.correct{border-color:#8ddcc5;background:#edfbf6;color:#157f65}.answer-option.correct .answer-letter{background:#d5f7e9;border-color:#a3e7d2;color:#138468}.answer-option.incorrect{border-color:#fac4c4;background:#fff5f4;color:#b44a4a}.answer-option.incorrect .answer-letter{border-color:#fac4c4;background:#ffe5e2;color:#b44a4a}.answer-feedback{margin-top:13px;padding:10px 13px;border-radius:10px;background:#f2f7ff;color:#526b91;font-size:11px;line-height:1.6}.answer-feedback.good{background:#edfbf6;color:#16785f}.answer-feedback.bad{background:#fff5f4;color:#a14d4d}.quiz-footer{margin-top:auto;padding-top:20px;display:flex;align-items:center;justify-content:space-between;gap:12px}.quiz-footer>span{color:#8a97aa;font-size:10px}.btn-small{min-height:39px;padding:0 15px;font-size:11px;border-radius:10px}.btn-small:disabled{cursor:not-allowed;background:#a6bce3;box-shadow:none}.quiz-result{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:30px;background:linear-gradient(135deg,#fff,#f4f8ff)}.quiz-result[hidden]{display:none}.result-medal{width:58px;height:58px;display:grid;place-items:center;border-radius:18px;background:#e3eeff;color:var(--blue);font-size:28px;margin-bottom:14px}.quiz-result .eyebrow{justify-content:center}.quiz-result h3{font-family:Manrope,sans-serif;font-size:28px;letter-spacing:-.9px;margin:8px 0}.quiz-result>p:not(.eyebrow){color:var(--muted);font-size:12px;margin:0 0 15px}.result-score{display:flex;align-items:baseline;gap:8px;margin-bottom:20px}.result-score strong{font:800 24px Manrope;color:var(--blue)}.result-score span{font-size:11px;color:#8491a7}
+.project-heading{margin-bottom:25px}.text-link{font-size:12px;font-weight:800;color:var(--blue);white-space:nowrap;padding-bottom:6px}.text-link span{font-size:16px;margin-left:7px}.project-filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:23px}.filter-chip{border:1px solid #e4eaf3;background:#fff;color:#718098;font-size:10px;font-weight:800;border-radius:9px;padding:9px 13px;transition:.18s}.filter-chip span{margin-left:5px;padding:2px 5px;background:#e5eeff;color:var(--blue);border-radius:5px;font-size:9px}.filter-chip:hover,.filter-chip.active{background:var(--blue);border-color:var(--blue);color:white}.filter-chip.active span{background:rgba(255,255,255,.2);color:#fff}.project-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:21px}.project-card{min-width:0;border:1px solid #e7edf6;border-radius:19px;overflow:hidden;background:#fff;transition:transform .22s,box-shadow .22s,border-color .22s}.project-card:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:#d6e3fb}.project-visual{height:186px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}.visual-plant{background:linear-gradient(135deg,#eef7f4,#e4f1ef)}.visual-sun{position:absolute;width:92px;height:92px;right:34px;top:23px;border-radius:50%;background:#f9df9f;opacity:.66}.plant-pot{position:relative;width:77px;height:63px;margin-top:47px;border-radius:8px 8px 19px 19px;background:linear-gradient(90deg,#c9794c,#edab79,#c8794e);box-shadow:0 15px 23px #6b9b8b40}.plant-stem{position:absolute;width:6px;height:72px;bottom:51px;left:35px;border-radius:6px;background:#388c65;transform:rotate(-4deg)}.plant-pot:before,.plant-pot:after{content:'';position:absolute;bottom:70px;width:30px;height:17px;border-radius:30px 0 30px 0;background:#5bb781}.plant-pot:before{left:8px;transform:rotate(27deg)}.plant-pot:after{right:7px;transform:rotate(-22deg) scaleX(-1)}.plant-pot i{position:absolute;bottom:75px;left:34px;width:25px;height:13px;border-radius:25px 0 25px 0;background:#4ba56e;transform:rotate(-42deg)}.plant-pot b{position:absolute;bottom:59px;left:25px;width:28px;height:13px;border-radius:0 25px 0 25px;background:#3d965e;transform:rotate(15deg)}.sensor-tag{position:absolute;bottom:15px;left:15px;font-size:8px;letter-spacing:1.2px;font-weight:800;color:#408c7b;background:#ffffffbf;padding:6px 9px;border-radius:7px}.visual-air{background:linear-gradient(135deg,#e8f1ff,#dfe9ff)}.air-device{position:relative;z-index:2;width:105px;height:112px;border:5px solid #d2deef;border-radius:20px;background:linear-gradient(135deg,#263e68,#142b4d);box-shadow:0 16px 30px #123d7840;display:flex;align-items:center;justify-content:center;flex-direction:column;color:#8bf2d7}.air-device>span{font:800 23px Manrope;letter-spacing:-1px}.air-device i{width:6px;height:6px;background:#54e3be;box-shadow:0 0 8px #54e3be;border-radius:50%;position:absolute;top:9px;right:11px}.air-device small{font-size:7px;letter-spacing:1px;margin-top:9px}.air-orb{position:absolute;border-radius:50%;filter:blur(1px)}.orb-a{width:90px;height:90px;left:45px;top:22px;background:#80bcff55}.orb-b{width:55px;height:55px;right:43px;bottom:22px;background:#48dfc655}.air-wave{position:absolute;width:195px;height:195px;border:1px solid #96b9f2;border-radius:50%;opacity:.45}.wave-a{width:235px;height:235px}.wave-b{width:280px;height:280px}.visual-distance{background:linear-gradient(135deg,#e7efff,#d4e2ff)}.radar-grid{position:absolute;width:178px;height:178px;border-radius:50%;border:1px solid #95b2ed;background:repeating-radial-gradient(circle,transparent 0 24px,#b2c8f4 25px 26px);opacity:.9}.radar-grid:before,.radar-grid:after{content:'';position:absolute;background:#a9c0ee}.radar-grid:before{top:50%;left:0;right:0;height:1px}.radar-grid:after{left:50%;top:0;bottom:0;width:1px}.radar-sweep{position:absolute;width:89px;height:89px;top:calc(50% - 89px);left:calc(50% - 1px);transform-origin:bottom left;background:linear-gradient(45deg,#2d73e566,transparent 76%);border-right:1px solid #2d73e5;animation:sweep 6s linear infinite}.radar-target{position:absolute;width:7px;height:7px;border-radius:50%;background:#155bd4;box-shadow:0 0 0 4px #1457d922}.target-a{top:59px;right:94px}.target-b{bottom:48px;left:111px}.distance-readout{position:absolute;right:17px;bottom:16px;padding:7px 10px;border:1px solid #ffffffb0;border-radius:8px;background:#ffffffba}.distance-readout>small{display:block;font-size:6px;letter-spacing:1px;color:#8798b8}.distance-readout b{font:800 15px Manrope;color:#2059c4}.distance-readout b small{display:inline;font-size:9px}.visual-door{background:linear-gradient(140deg,#edf3ff,#dae7ff)}.door-frame{height:140px;width:91px;border-radius:6px 6px 0 0;background:#a1b9e8;padding:7px;box-shadow:0 10px 24px #5276b52b}.door-panel{position:relative;width:100%;height:100%;background:linear-gradient(90deg,#31548d,#557dc0);border:2px solid #7396d1;border-radius:3px 3px 0 0}.door-knob{position:absolute;right:9px;top:66px;width:8px;height:8px;border-radius:50%;background:#e9f1ff}.wifi-mark{position:absolute;top:20px;left:25px;color:#87ffe3;font-size:30px;transform:rotate(90deg)}.door-status{position:absolute;bottom:20px;right:18px;border-radius:8px;background:#fff;padding:6px 9px;font-size:7px;letter-spacing:1px;color:#4167a9;font-weight:800}.visual-led{background:linear-gradient(135deg,#edf6ff,#d8e8ff)}.led-board{display:grid;grid-template-columns:repeat(4,24px);gap:13px;padding:22px;border:5px solid #b5c8e7;background:linear-gradient(135deg,#1e6c67,#184b4c);border-radius:13px;box-shadow:0 12px 25px #24446f33;transform:rotate(-7deg)}.led-board span{height:24px;width:24px;border-radius:50%;background:#ffdb70;box-shadow:0 0 12px #ffd36b,0 0 23px #ffcf6655;border:4px solid #b6b4a0}.led-board span:nth-child(2n){background:#58dcbb;box-shadow:0 0 12px #58dcbb,0 0 23px #58dcbb55}.led-board span:nth-child(3n){background:#5da8ff;box-shadow:0 0 12px #5da8ff,0 0 23px #5da8ff55}.board-traces{position:absolute;width:250px;height:170px;border-top:1px dashed #9ebce8;border-bottom:1px dashed #9ebce8;transform:rotate(24deg);opacity:.6}.board-caption{position:absolute;bottom:13px;right:14px;color:#7890b9;font:800 8px Manrope;letter-spacing:1.4px}.visual-weather{background:linear-gradient(135deg,#e9f3ff,#d4e4ff)}.weather-sun{position:absolute;top:27px;left:50px;width:46px;height:46px;border-radius:50%;background:#ffd982;box-shadow:0 0 0 10px #ffe7ad60}.weather-cloud{position:absolute;height:29px;border-radius:35px;background:#fff;box-shadow:0 5px 12px #7594c222}.weather-cloud:before,.weather-cloud:after{content:'';position:absolute;border-radius:50%;background:#fff}.weather-cloud:before{height:31px;width:31px;left:13px;top:-15px}.weather-cloud:after{height:23px;width:23px;right:15px;top:-9px}.cloud-a{width:91px;top:62px;left:38px}.cloud-b{width:71px;top:100px;right:30px;transform:scale(.7)}.weather-screen{z-index:2;position:absolute;bottom:14px;right:25px;width:99px;height:78px;border-radius:11px;border:4px solid #bed0ec;background:linear-gradient(135deg,#24446b,#132f51);color:#a4ffdf;padding:9px;box-shadow:0 10px 18px #183e6d30}.weather-screen small{display:block;font-size:6px;letter-spacing:1px;color:#a7c1e0}.weather-screen b{font:800 22px Manrope;line-height:1.15}.weather-screen span{display:block;white-space:nowrap;font-size:5px;letter-spacing:.5px}.project-content{padding:19px 18px 17px}.card-meta{display:flex;align-items:center;justify-content:space-between;gap:8px;color:#9aa6b8;font-size:8px;font-weight:800;letter-spacing:.8px}.level{display:inline-flex;padding:5px 7px;border-radius:5px;font-size:8px;font-weight:800;letter-spacing:.6px}.level.beginner{color:#188a75;background:#e4faf4}.level.intermediate{color:#3b6fcd;background:#eaf1ff}.project-content h3{font-family:Manrope,sans-serif;font-size:16px;letter-spacing:-.4px;margin:13px 0 6px}.project-content>p{min-height:42px;margin:0;color:#7a879d;font-size:11px;line-height:1.65}.project-bottom{display:flex;align-items:center;justify-content:space-between;gap:8px;border-top:1px solid #edf1f7;padding-top:13px;margin-top:15px;color:#7f8ca1;font-size:9px}.round-arrow{width:30px;height:30px;flex-shrink:0;display:grid;place-items:center;border:1px solid #e3eaf5;background:#fff;border-radius:9px;color:var(--blue);font-size:16px;transition:.2s}.round-arrow:hover{background:var(--blue);color:#fff;border-color:var(--blue)}.project-empty{padding:40px;text-align:center;border:1px dashed #ccd9ee;border-radius:15px;color:#7b8ba5}.section-bottom-note{margin-top:25px;padding:13px 15px;border-radius:11px;background:#f7faff;display:flex;align-items:flex-start;gap:10px;color:#8090a8;font-size:10px;line-height:1.6}.bulb-icon{width:22px;height:22px;display:grid;place-items:center;flex-shrink:0;border-radius:7px;background:#e4efff;color:var(--blue)}
+@keyframes sweep{from{transform:rotate(0)}to{transform:rotate(360deg)}}.ai-section{background:#f6f9ff;position:relative;overflow:hidden}.ai-section:before{content:'';position:absolute;width:380px;height:380px;right:-200px;top:-200px;border:1px solid #e0eaff;border-radius:50%;box-shadow:0 0 0 35px #edf3ff,0 0 0 70px #f0f5ff}.ai-grid{position:relative;display:grid;grid-template-columns:.83fr 1.17fr;align-items:center;gap:72px}.ai-copy h2{margin-top:18px;margin-bottom:15px;font-size:clamp(32px,3.5vw,44px)}.ai-copy>p{font-size:13px;max-width:410px}.ai-benefits{display:grid;gap:12px;margin-top:25px}.ai-benefits div{display:flex;align-items:center;gap:10px;color:#53627b;font-size:11px;font-weight:600}.ai-benefits div span{width:20px;height:20px;display:grid;place-items:center;border-radius:6px;background:#dcf8ef;color:#138b70;font-size:12px;font-weight:800}.ai-mode-note{display:flex;align-items:flex-start;gap:8px;margin-top:22px;padding:11px 12px;border:1px solid #e3eaf7;border-radius:10px;background:#fff;color:#8290a7;font-size:9px;line-height:1.6;max-width:385px}.mode-indicator{display:block;flex-shrink:0;width:7px;height:7px;margin-top:5px;border-radius:50%;background:#e5a834}.mode-indicator.connected{background:#25b99b}.chat-card{min-width:0;background:white;border:1px solid #e4ebf7;border-radius:21px;box-shadow:0 22px 60px rgba(29,64,126,.09);overflow:hidden}.chat-header{display:flex;align-items:center;gap:11px;padding:18px 21px;border-bottom:1px solid #eef2f8}.chat-avatar{position:relative;width:39px;height:39px;display:grid;place-items:center;border-radius:13px;background:linear-gradient(145deg,#2068ec,#1248bd);color:#fff;font:800 12px Manrope}.chat-avatar>span{position:absolute;right:-4px;top:-5px;width:15px;height:15px;display:grid;place-items:center;border-radius:50%;background:#d9f9f1;color:#129a84;font-size:9px;border:2px solid white}.chat-header-copy{flex:1}.chat-header-copy b{display:block;font-family:Manrope,sans-serif;font-size:12px}.chat-header-copy small{display:block;font-size:9px;color:#8a97ab;margin-top:3px}.online-dot{display:inline-block;width:5px;height:5px;border-radius:50%;background:#25bc9d;margin-right:4px}.chat-header-badge{font-size:8px;letter-spacing:1px;color:#4b79c9;background:#edf4ff;padding:6px 8px;border-radius:6px;font-weight:800}.chat-messages{padding:18px 19px 12px;height:250px;overflow-y:auto;display:flex;flex-direction:column;gap:13px}.chat-message{display:flex;align-items:flex-start;gap:8px;max-width:95%}.chat-message.user{align-self:flex-end;flex-direction:row-reverse}.message-avatar{width:25px;height:25px;display:grid;place-items:center;flex-shrink:0;border-radius:8px;background:#e6efff;color:var(--blue);font:800 8px Manrope}.message-bubble{min-width:0;border-radius:0 12px 12px 12px;background:#f4f7fc;padding:10px 12px;color:#5a6881;font-size:11px;line-height:1.7}.message-bubble small{display:block;color:#8b9ab2;font-size:7px;letter-spacing:1px;font-weight:800;margin-bottom:4px}.message-bubble p{margin:0;white-space:pre-wrap;overflow-wrap:anywhere}.chat-message.user .message-bubble{background:#eaf2ff;color:#31538b;border-radius:12px 0 12px 12px}.chat-message.user .message-bubble small{text-align:right;color:#6483b9}.suggestion-row{display:flex;flex-wrap:wrap;gap:6px;padding:0 19px 13px}.suggestion-chip{border:1px solid #e1e9f7;border-radius:7px;padding:6px 8px;background:#fff;color:#607394;font-size:9px;font-weight:700}.suggestion-chip:hover{border-color:#a9c4fb;color:var(--blue);background:#f5f9ff}.chat-input-row{display:flex;align-items:center;gap:10px;padding:10px 13px 10px 16px;margin:0 14px;border:1px solid #e0e8f5;border-radius:12px;box-shadow:0 5px 14px rgba(25,67,139,.04)}.chat-input-row input{min-width:0;flex:1;border:0;outline:0;color:var(--ink);font-size:11px;background:transparent}.chat-input-row input::placeholder{color:#a0abbd}.chat-input-row button{display:grid;place-items:center;width:31px;height:31px;flex-shrink:0;border:0;border-radius:9px;background:var(--blue);color:#fff;font-size:21px;line-height:1;box-shadow:0 4px 10px #1457d932}.chat-input-row button:disabled{opacity:.55;cursor:wait}.chat-disclaimer{text-align:center;color:#a0aabd;font-size:8px;padding:0 12px 13px;margin:8px 0 0}.final-cta{background:linear-gradient(110deg,#1047b9,#1667eb);color:white;overflow:hidden}.cta-inner{min-height:225px;display:flex;align-items:center;gap:30px;position:relative;padding-block:40px}.cta-decoration{width:85px;height:85px;display:grid;place-items:center;flex-shrink:0;border:1px solid #ffffff42;border-radius:25px;background:#ffffff14;color:#9feee1;font-size:50px;transform:rotate(-12deg)}.cta-inner .eyebrow{color:#a4c7ff}.cta-inner h2{font-size:clamp(25px,3vw,34px);letter-spacing:-1.2px;margin:8px 0}.cta-inner p{font-size:12px;color:#d0e1ff;margin:0}.btn-white{margin-left:auto;background:#fff;color:#1b55c2;white-space:nowrap}.btn-white:hover{box-shadow:0 11px 24px #072c7544}.site-footer{background:#fff}.footer-top{min-height:112px;display:flex;align-items:center;gap:25px;border-bottom:1px solid #edf1f7}.footer-brand .brand-mark{width:36px;height:36px;border-radius:11px}.footer-brand .brand-mark svg{width:27px}.footer-brand .brand-copy strong{font-size:14px}.footer-brand .brand-copy small{font-size:8px}.footer-top>p{margin:0;color:#8a97ab;font-size:10px}.footer-links{display:flex;align-items:center;gap:22px;margin-left:auto}.footer-links a{font-size:10px;color:#7a879b;font-weight:700}.footer-links a:hover{color:var(--blue)}.footer-bottom{display:flex;justify-content:space-between;gap:15px;padding:18px 0;color:#a0aabd;font-size:9px}.heart{color:#ee8190}
+.modal-backdrop{position:fixed;inset:0;z-index:100;display:flex;align-items:center;justify-content:center;padding:20px;background:rgba(10,27,61,.46);backdrop-filter:blur(5px);overflow-y:auto}.modal-backdrop[hidden]{display:none}.modal-card{position:relative;width:min(100%,460px);max-height:calc(100vh - 40px);overflow-y:auto;background:#fff;border:1px solid #e5ecf8;border-radius:22px;box-shadow:0 28px 100px #071b3d4d}.auth-card{padding:34px 36px}.modal-close{position:absolute;top:15px;right:16px;z-index:2;width:34px;height:34px;border:1px solid #e7edf6;border-radius:10px;background:#fff;color:#76839a;font-size:24px;line-height:1}.modal-close:hover{background:#f2f6fd;color:var(--blue)}.modal-brand{display:flex;justify-content:center;margin-bottom:16px}.modal-brand .brand-mark{width:46px;height:46px}.auth-card>.eyebrow{justify-content:center;text-align:center;font-size:8px}.auth-card h2{text-align:center;font:800 27px Manrope;letter-spacing:-1px;margin:10px 0 6px}.modal-intro{text-align:center;color:#8390a6;font-size:11px;line-height:1.7;margin:0 auto 21px;max-width:300px}.auth-tabs{display:grid;grid-template-columns:1fr 1fr;gap:4px;padding:4px;background:#f1f5fb;border-radius:10px;margin-bottom:19px}.auth-tab{border:0;background:transparent;padding:9px;border-radius:7px;color:#7b89a0;font-size:11px;font-weight:800}.auth-tab.active{background:#fff;color:var(--blue);box-shadow:0 2px 7px #183e7314}.auth-card form{display:flex;flex-direction:column;gap:7px}.auth-card label{font-size:10px;color:#586780;font-weight:800;margin-top:6px}.auth-card input{width:100%;height:43px;padding:0 12px;border:1px solid #dfe7f2;border-radius:10px;outline:none;background:#fff;color:var(--ink);font-size:11px}.auth-card input:focus{border-color:#7da7ff;box-shadow:0 0 0 3px #1457d913}.auth-card input[hidden],.auth-card label[hidden]{display:none}.auth-message{min-height:0;margin:3px 0;color:#b44a4a;font-size:10px;line-height:1.6}.auth-message:empty{display:none}.auth-submit{width:100%;margin-top:4px}.auth-divider{display:flex;align-items:center;gap:11px;color:#a1acbd;font-size:8px;letter-spacing:1px;margin:16px 0}.auth-divider:before,.auth-divider:after{content:'';height:1px;flex:1;background:#edf1f7}.guest-button{width:100%;min-height:44px}.auth-footnote{text-align:center;font-size:9px;line-height:1.65;color:#9aa6b7;margin:13px 0 0}.project-detail-card{width:min(100%,740px)}.detail-art{height:150px;display:grid;place-items:center;background:linear-gradient(135deg,#eaf2ff,#dce9ff);color:var(--blue);font:800 40px Manrope}.detail-body{padding:27px 30px 30px}.detail-body h2{font:800 27px Manrope;letter-spacing:-1px;margin:11px 0 9px}.detail-body>p{font-size:12px;color:#78869d;line-height:1.8;margin:0}.detail-columns{display:grid;grid-template-columns:1fr 1fr;gap:25px;padding:23px 0}.detail-columns h3{font:800 12px Manrope;margin:0 0 12px}.detail-columns h3 span{color:var(--blue);margin-right:7px}.detail-columns ul{padding-left:17px;margin:0;color:#6e7d94;font-size:11px;line-height:1.9}.detail-columns>div>p{margin:0;color:#6e7d94;font-size:11px;line-height:1.9}.detail-note{display:flex;gap:10px;align-items:flex-start;border:1px solid #e5edfc;background:#f6f9ff;border-radius:11px;padding:13px;margin-bottom:18px}.detail-note>span{color:#e2a331}.detail-note p{margin:0;font-size:10px;color:#8390a5;line-height:1.7}.detail-note b{color:#4b5d7a}.detail-body>.btn{font-size:11px}.toast{position:fixed;z-index:200;left:50%;bottom:22px;transform:translate(-50%,20px);opacity:0;pointer-events:none;max-width:calc(100% - 30px);padding:12px 17px;border-radius:12px;background:#142849;color:white;font-size:11px;box-shadow:0 10px 30px #091b3530;transition:.25s}.toast.show{opacity:1;transform:translate(-50%,0)}
+@media(max-width:1000px){.main-nav{gap:19px}.hero-grid{gap:20px}.hero-art{transform:scale(.93);margin-inline:-15px}.stat-item{padding-inline:15px}.viva-layout{grid-template-columns:280px minmax(0,1fr)}.project-grid{gap:14px}.project-content{padding:16px 14px}.project-content h3{font-size:14px}.ai-grid{gap:42px}}
+@media(max-width:780px){.container{width:min(100% - 34px,600px)}.section{padding:70px 0}.nav-wrap{height:70px}.brand-mark{width:39px;height:39px}.brand-copy strong{font-size:15px}.brand-copy small{font-size:8px}.menu-toggle{display:block;margin-left:auto}.main-nav{display:none;position:absolute;top:70px;left:0;right:0;padding:14px 20px 20px;background:white;border-bottom:1px solid #e7edf6;box-shadow:0 18px 28px #1b3e760e;align-items:stretch;gap:0}.main-nav.open{display:flex;flex-direction:column}.nav-link{padding:12px 5px;border-bottom:1px solid #f0f3f8}.nav-link.active:after{display:none}.nav-login{justify-content:center;margin-top:13px}.hero{padding:55px 0 50px}.hero-grid{grid-template-columns:1fr;gap:20px}.hero h1{font-size:clamp(45px,11vw,62px);margin:18px 0 15px}.hero-lead{font-size:14px;max-width:520px}.hero-actions{margin-top:22px}.hero-proof{margin-top:27px}.hero-art{height:365px;max-width:520px;width:100%;margin:0 auto;transform:none}.art-glow{width:290px;height:290px}.chip-main{top:68px;width:170px;height:196px;left:calc(50% - 85px);border-radius:20px}.chip-core{width:86px;height:86px;padding:12px;gap:8px;border-radius:18px}.chip-core i{width:7px;height:7px}.chip-small{width:105px;height:69px}.chip-one{right:5%;top:30px}.chip-two{left:4%;bottom:69px}.float-viva{top:200px;left:0}.float-project{bottom:4px;right:0}.art-bottom-note{bottom:-10px}.quick-stats .stats-grid{grid-template-columns:1fr 1fr;padding-block:12px}.stat-item{padding:13px 10px;border-right:0}.stat-item:nth-child(odd){border-right:1px solid var(--line)}.stat-item:nth-child(-n+2){border-bottom:1px solid var(--line)}.stat-item:first-child{padding-left:10px}.stat-icon{width:36px;height:36px}.section-heading{align-items:flex-start;flex-direction:column;margin-bottom:27px;gap:13px}.section-heading h2,.ai-copy h2{font-size:clamp(29px,7vw,38px)}.heading-tag{margin:0}.viva-layout{grid-template-columns:1fr;gap:15px}.viva-sidebar{padding:20px 16px}.subject-list{grid-template-columns:1fr 1fr;gap:7px}.subject-option{grid-template-columns:30px 1fr;gap:8px;padding:9px}.subject-option .subject-arrow{display:none}.subject-symbol{width:30px;height:30px}.subject-option b{font-size:10px}.subject-option small{font-size:8px}.sidebar-tip{margin-top:18px;padding-top:13px}.quiz-panel{padding:22px 18px;min-height:435px}.question-area h3{font-size:17px}.answer-list{grid-template-columns:1fr}.answer-option{min-height:43px;padding:9px 11px}.quiz-footer{align-items:flex-start}.quiz-footer>span{max-width:50%;line-height:1.6}.project-heading{gap:8px}.project-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.project-visual{height:145px}.project-content{padding:14px 12px}.project-content h3{font-size:13px;line-height:1.4}.project-content>p{font-size:10px;min-height:48px}.project-bottom{font-size:8px}.card-meta{font-size:7px}.level{font-size:7px;padding:4px 5px}.project-filters{gap:6px}.filter-chip{font-size:9px;padding:8px 10px}.section-bottom-note{font-size:9px}.ai-grid{grid-template-columns:1fr;gap:30px}.ai-copy>p{max-width:570px}.ai-benefits{grid-template-columns:1fr 1fr;gap:10px}.ai-benefits div{font-size:10px;align-items:flex-start}.chat-card{max-width:550px;width:100%;margin-inline:auto}.chat-messages{height:245px}.cta-inner{min-height:auto;padding:40px 0;gap:17px;flex-wrap:wrap}.cta-decoration{width:57px;height:57px;border-radius:17px;font-size:36px}.cta-inner>div:nth-child(2){flex:1;min-width:210px}.cta-inner h2{font-size:25px}.cta-inner p{font-size:10px}.btn-white{margin-left:74px}.footer-top{padding-block:24px;display:grid;grid-template-columns:1fr auto;gap:13px}.footer-top>p{grid-column:1/-1;grid-row:2}.footer-links{grid-column:1/-1;grid-row:3;margin-left:0;gap:18px}.footer-bottom{font-size:8px}.project-detail-card{width:min(100%,600px)}.detail-body{padding:23px 20px}.detail-body h2{font-size:23px}}
+@media(max-width:420px){.container{width:calc(100% - 28px)}.hero-actions{display:grid;grid-template-columns:1fr 1fr}.btn{padding-inline:12px;font-size:11px;gap:8px}.hero-art{height:335px}.chip-main{top:59px}.chip-one{right:0;top:25px}.chip-two{left:0;bottom:61px}.float-viva{top:188px;padding:9px}.float-project{padding:9px}.float-pill b{font-size:9px}.float-pill small{font-size:8px}.art-bottom-note{font-size:7px;letter-spacing:1.3px}.stat-item{gap:8px;padding:11px 7px}.stat-item:first-child{padding-left:7px}.stat-icon{width:31px;height:31px;font-size:18px}.stat-item strong{font-size:10px}.stat-item small{font-size:8px}.subject-list{grid-template-columns:1fr}.subject-option{grid-template-columns:31px 1fr auto}.subject-option .subject-arrow{display:block}.subject-option b{font-size:11px}.subject-option small{font-size:9px}.viva-sidebar{padding:19px 14px}.quiz-panel{padding-inline:14px}.question-counter{font-size:8px}.quiz-footer{gap:7px}.quiz-footer>span{font-size:9px}.btn-small{padding-inline:10px;font-size:10px}.project-grid{grid-template-columns:1fr}.project-visual{height:180px}.project-content{padding:17px}.project-content h3{font-size:15px}.project-content>p{min-height:0;font-size:11px}.project-bottom{font-size:9px}.card-meta{font-size:8px}.level{font-size:8px}.ai-benefits{grid-template-columns:1fr}.chat-messages{padding-inline:12px}.suggestion-row{padding-inline:12px}.chat-input-row{margin-inline:10px}.chat-header{padding-inline:14px}.footer-bottom{flex-direction:column;gap:4px}.detail-columns{grid-template-columns:1fr;gap:15px}.auth-card{padding:28px 22px}.cta-inner h2{font-size:23px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+
+  </style>
+  <script type="module">
+/*
+ * Electronic Sathi — static frontend for GitHub Pages.
+ * To enable real accounts, configure Supabase URL + publishable anon key below.
+ * To enable live AI, point AI_API_URL to YOUR secure backend endpoint.
+ * Never put a private AI provider key in this frontend file.
+ */
+const SUPABASE_URL = ""; // Example: https://your-project.supabase.co
+const SUPABASE_ANON_KEY = ""; // Supabase publishable/anon key only (not a service-role key)
+const AI_API_URL = ""; // Example: https://your-secure-backend.example.com/api/study-chat
+
+const quizData = {
+  Basics: [
+    { q: "What is the main function of a resistor in a circuit?", options: ["Store electrical charge", "Limit or control current", "Generate a clock signal", "Convert AC into DC"], answer: 1, explain: "A resistor opposes current flow. It is commonly used to limit current and divide voltage." },
+    { q: "Which component stores energy in an electric field?", options: ["Capacitor", "Fuse", "Diode", "Transformer"], answer: 0, explain: "A capacitor stores energy in an electric field between its conductive plates." },
+    { q: "What does a diode ideally allow?", options: ["Current equally in both directions", "Only AC current", "Current mainly in one direction", "No current under any condition"], answer: 2, explain: "A diode is designed to conduct in forward bias and block current in reverse bias, within its ratings." },
+    { q: "Which instrument measures voltage across two points?", options: ["Ammeter", "Voltmeter", "Wattmeter only", "Frequency counter"], answer: 1, explain: "A voltmeter measures potential difference and is connected in parallel with the part being measured." },
+    { q: "What is the SI unit of electrical resistance?", options: ["Farad", "Henry", "Ohm", "Tesla"], answer: 2, explain: "Resistance is measured in ohms (Ω). One ohm equals one volt per ampere." },
+  ],
+  Digital: [
+    { q: "How many input combinations does a 2-input AND gate have?", options: ["2", "3", "4", "8"], answer: 2, explain: "Two binary inputs have 2² = 4 possible combinations: 00, 01, 10, and 11." },
+    { q: "What is the output of an XOR gate when both inputs are 1?", options: ["0", "1", "High impedance", "It depends on frequency"], answer: 0, explain: "XOR outputs 1 when its inputs differ. For inputs 1 and 1, the output is 0." },
+    { q: "How many bits are in one byte?", options: ["4", "8", "10", "16"], answer: 1, explain: "A byte is made up of 8 bits." },
+    { q: "Which flip-flop is commonly used to store one bit?", options: ["SRAM array only", "D flip-flop", "Multiplexer only", "Decoder only"], answer: 1, explain: "A D flip-flop stores one bit and captures its D input at the active clock edge." },
+    { q: "What is the binary equivalent of decimal 5?", options: ["101", "110", "100", "111"], answer: 0, explain: "Decimal 5 = 4 + 1, so its binary representation is 101." },
+  ],
+  Microcontrollers: [
+    { q: "What is the purpose of GPIO pins on a microcontroller?", options: ["Only store programs", "Provide general-purpose digital input/output", "Increase mains voltage", "Replace the power supply"], answer: 1, explain: "GPIO pins can be configured to read digital signals or control outputs such as LEDs and relays through suitable driver circuits." },
+    { q: "Which board family commonly includes built-in Wi-Fi and Bluetooth?", options: ["ESP32", "555 timer only", "LM741", "Basic bridge rectifier"], answer: 0, explain: "Many ESP32 variants include Wi-Fi and Bluetooth, making them popular for IoT projects." },
+    { q: "Why is a current-limiting resistor often used with an LED?", options: ["To increase its colour", "To protect it from excessive current", "To make it store data", "To convert it into a sensor"], answer: 1, explain: "An LED can be damaged by excessive current. A correctly calculated series resistor helps limit that current." },
+    { q: "What does ADC stand for?", options: ["Automatic Data Clock", "Analog-to-Digital Converter", "Active Device Controller", "Applied Digital Current"], answer: 1, explain: "An ADC converts an analog voltage into a digital number that a microcontroller can process." },
+    { q: "What is firmware?", options: ["A physical connector", "Software stored on an embedded device", "A type of resistor", "A wireless frequency band"], answer: 1, explain: "Firmware is the software programmed into an embedded device to control its behaviour." },
+  ],
+  Communication: [
+    { q: "What is modulation?", options: ["Changing a carrier using a message signal", "Removing all information from a signal", "Converting resistance to capacitance", "Measuring only DC current"], answer: 0, explain: "Modulation varies a carrier parameter, such as amplitude, frequency, or phase, according to the information signal." },
+    { q: "What does bandwidth describe in a communication system?", options: ["Cable colour", "The range of frequencies occupied or passed", "A battery's capacity only", "A transistor package"], answer: 1, explain: "Bandwidth is the range of frequencies a signal occupies or a system can transmit or pass." },
+    { q: "Which modulation changes the carrier amplitude?", options: ["FM", "PM", "AM", "PCM only"], answer: 2, explain: "Amplitude modulation varies the carrier's amplitude in accordance with the message signal." },
+    { q: "What is noise in a communication system?", options: ["Wanted information only", "Unwanted disturbance that affects a signal", "A type of antenna gain", "A digital logic gate"], answer: 1, explain: "Noise is an unwanted disturbance that may degrade a signal or make information harder to recover." },
+    { q: "What is the main role of an antenna?", options: ["Store program code", "Radiate or receive electromagnetic waves", "Regulate DC voltage only", "Measure resistance"], answer: 1, explain: "An antenna converts guided electrical signals into electromagnetic waves for transmission and converts received waves back into electrical signals." },
+  ],
+  IoT: [
+    { q: "What does IoT stand for?", options: ["Internet of Things", "Input of Transistors", "Integration of Timing", "Interface over Telephone"], answer: 0, explain: "The Internet of Things connects physical devices with sensing, software, and network communication." },
+    { q: "What is a sensor used for?", options: ["Only display web pages", "Measure a physical condition", "Always amplify audio", "Replace all microcontrollers"], answer: 1, explain: "Sensors measure conditions such as temperature, light, motion, pressure, or gas concentration." },
+    { q: "What is the role of MQTT in many IoT systems?", options: ["A lightweight messaging protocol", "A soldering technique", "A voltage regulator", "A type of temperature sensor"], answer: 0, explain: "MQTT is a lightweight publish/subscribe messaging protocol often used to exchange data between IoT devices and services." },
+    { q: "Why is a cloud dashboard useful in an IoT project?", options: ["It replaces the sensor physically", "It can display data remotely", "It guarantees zero latency", "It eliminates the need for power"], answer: 1, explain: "A cloud dashboard can display readings, trends, and alerts remotely when the device is connected and the service is configured." },
+    { q: "What should be checked before connecting a sensor to a microcontroller?", options: ["Only its package colour", "Voltage levels, pinout, and interface", "The font used in its datasheet", "The room's wall colour"], answer: 1, explain: "Always verify the sensor's supply voltage, pinout, signal levels, and interface before wiring it." },
+  ],
+};
+
+const projectInfo = {
+  'smart-plant': { title: 'Smart Plant Monitoring', level: 'BEGINNER', category: 'SENSORS · ARDUINO', description: 'Build a simple system that monitors soil moisture and indicates when a plant may need watering. It is a useful first project for learning analog input and thresholds.', components: ['Arduino Uno or compatible board', 'Soil-moisture sensor module', 'LED and suitable series resistor', 'Breadboard and jumper wires', 'USB cable or suitable low-voltage supply'], working: 'The sensor produces a signal related to soil moisture. The microcontroller reads the signal and compares it with a threshold. An LED can indicate dry soil; the threshold should be calibrated for the sensor and soil.', tip: 'Test the sensor in dry and damp soil first. Avoid leaving low-cost sensor probes powered in wet soil continuously; corrosion can affect readings.' },
+  'air-quality': { title: 'IoT Air Quality Monitor', level: 'INTERMEDIATE', category: 'ESP32 · IoT', description: 'Read a gas or air-quality sensor using an ESP32 and send readings to a dashboard. Use this as a learning prototype rather than a certified safety monitor.', components: ['ESP32 development board', 'Compatible gas / air-quality sensor module', 'Breadboard and jumper wires', 'USB cable and stable power source', 'Optional cloud dashboard or local web page'], working: 'The ESP32 reads the sensor output and can publish data over Wi-Fi using HTTP or MQTT. A dashboard can display readings over time. Sensor warm-up, calibration, and environmental conditions affect results.', tip: 'Many low-cost gas sensors are not calibrated instruments. Do not use this prototype as a substitute for certified smoke, gas-leak, or life-safety alarms.' },
+  'distance-alert': { title: 'Ultrasonic Distance Alert', level: 'BEGINNER', category: 'EMBEDDED · SENSORS', description: 'Measure the distance to an object with an ultrasonic sensor and activate a buzzer or LED when an object is too close.', components: ['Arduino-compatible board', 'HC-SR04 ultrasonic sensor', 'LED with a series resistor or a suitable buzzer', 'Breadboard and jumper wires', 'Power and USB cable'], working: 'The sensor emits an ultrasonic pulse and measures the time for its echo to return. The controller estimates distance from the echo time and speed of sound, then compares the result against a chosen threshold.', tip: 'Check signal-voltage compatibility. The HC-SR04 echo output is typically 5 V; use a suitable divider or level shifter before connecting it to a 3.3 V-only ESP32 input.' },
+  'smart-door': { title: 'Wi-Fi Smart Door Alert', level: 'INTERMEDIATE', category: 'ESP32 · IoT', description: 'Use a magnetic reed switch to detect whether a door is open or closed and show the status on a local page or send a notification through a configured service.', components: ['ESP32 development board', 'Magnetic reed switch module', 'Jumper wires and suitable pull-up configuration', 'USB supply', 'Optional notification service or dashboard'], working: 'A reed switch changes state when the magnet moves away. The ESP32 reads the input and sends a status update through Wi-Fi when a network and endpoint are configured.', tip: 'Build the low-voltage sensing circuit first. Do not connect the microcontroller directly to mains wiring or a mains-powered door-lock circuit.' },
+  'led-pattern': { title: 'Programmable LED Patterns', level: 'BEGINNER', category: 'DIGITAL · ARDUINO', description: 'Program a sequence of LEDs to blink in patterns. This project introduces digital output pins, timing, loops, and basic debugging.', components: ['Arduino-compatible board', '3–8 LEDs', 'One correctly sized resistor per LED', 'Breadboard and jumper wires', 'USB cable'], working: 'The controller sets output pins HIGH or LOW in a sequence and inserts delays between states. Students can change the sequence, timing, and patterns to practise basic programming logic.', tip: 'Use a current-limiting resistor for each LED and stay within the microcontroller pin-current limits.' },
+  'weather-station': { title: 'Connected Weather Station', level: 'INTERMEDIATE', category: 'ESP32 · IoT', description: 'Measure ambient temperature and humidity, then display the readings on a local dashboard or send them to a cloud service.', components: ['ESP32 development board', 'Compatible DHT22 / DHT11 or digital sensor', 'Jumper wires', 'USB cable and stable power', 'Optional dashboard endpoint'], working: 'The ESP32 reads temperature and humidity from the sensor at suitable intervals. A web page or configured cloud service can display the readings and optionally store a history.', tip: 'Follow the sensor datasheet for wiring, pull-up requirements, timing, and accuracy. Keep the sensor away from heat sources for more useful readings.' },
+};
+
+const $ = (selector, scope = document) => scope.querySelector(selector);
+const $$ = (selector, scope = document) => [...scope.querySelectorAll(selector)];
+let selectedSubject = 'Basics';
+let questionIndex = 0;
+let score = 0;
+let answered = false;
+let authMode = 'login';
+let supabase = null;
+let authSession = null;
+let activeProject = null;
+let toastTimeout = null;
+const chatHistory = [];
+
+function showToast(message) {
+  const toast = $('#toast');
+  toast.textContent = message;
+  toast.classList.add('show');
+  clearTimeout(toastTimeout);
+  toastTimeout = setTimeout(() => toast.classList.remove('show'), 2800);
+}
+
+function openModal(id) {
+  const modal = document.getElementById(id);
+  if (!modal) return;
+  modal.hidden = false;
+  document.body.style.overflow = 'hidden';
+  const focusTarget = modal.querySelector('input, button');
+  if (focusTarget) setTimeout(() => focusTarget.focus(), 50);
+}
+function closeModal(id) {
+  const modal = document.getElementById(id);
+  if (modal) modal.hidden = true;
+  if (!$('.modal-backdrop:not([hidden])')) document.body.style.overflow = '';
+}
+
+// Responsive navigation
+$('#menuToggle').addEventListener('click', () => {
+  const nav = $('#mainNav');
+  const isOpen = nav.classList.toggle('open');
+  $('#menuToggle').setAttribute('aria-expanded', String(isOpen));
+  $('#menuToggle').setAttribute('aria-label', isOpen ? 'Close navigation' : 'Open navigation');
+});
+$$('.main-nav a').forEach(link => link.addEventListener('click', () => {
+  $('#mainNav').classList.remove('open');
+  $('#menuToggle').setAttribute('aria-expanded', 'false');
+}));
+
+// Viva quiz engine
+function renderQuestion() {
+  const set = quizData[selectedSubject];
+  const question = set[questionIndex];
+  answered = false;
+  $('#quizResult').hidden = true;
+  $('#questionArea').hidden = false;
+  $('#questionTopic').textContent = ({ Basics: 'BASIC ELECTRONICS', Digital: 'DIGITAL ELECTRONICS', Microcontrollers: 'MICROCONTROLLERS', Communication: 'COMMUNICATION SYSTEMS', IoT: 'IoT FUNDAMENTALS' })[selectedSubject];
+  $('#questionText').textContent = question.q;
+  $('#questionCounter').textContent = `QUESTION ${String(questionIndex + 1).padStart(2, '0')} / ${String(set.length).padStart(2, '0')}`;
+  $('#quizProgress').style.width = `${((questionIndex + 1) / set.length) * 100}%`;
+  $('#quizHint').textContent = 'Select one answer to check your knowledge.';
+  $('#nextQuestion').disabled = true;
+  $('#nextQuestion').innerHTML = questionIndex === set.length - 1 ? 'See Results <span>→</span>' : 'Next Question <span>→</span>';
+  $('#answerFeedback').hidden = true;
+  $('#answerFeedback').className = 'answer-feedback';
+  const answerList = $('#answerList');
+  answerList.replaceChildren();
+  question.options.forEach((option, index) => {
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'answer-option';
+    button.innerHTML = `<span class="answer-letter">${String.fromCharCode(65 + index)}</span><span></span>`;
+    $('span:last-child', button).textContent = option;
+    button.addEventListener('click', () => selectAnswer(index));
+    answerList.appendChild(button);
+  });
+}
+function selectAnswer(index) {
+  if (answered) return;
+  answered = true;
+  const question = quizData[selectedSubject][questionIndex];
+  const buttons = $$('.answer-option', $('#answerList'));
+  buttons.forEach((button, i) => {
+    button.disabled = true;
+    if (i === question.answer) button.classList.add('correct');
+    if (i === index && i !== question.answer) button.classList.add('incorrect');
+  });
+  const feedback = $('#answerFeedback');
+  feedback.hidden = false;
+  const isCorrect = index === question.answer;
+  if (isCorrect) score++;
+  feedback.classList.add(isCorrect ? 'good' : 'bad');
+  feedback.textContent = `${isCorrect ? 'Correct!' : 'Not quite.'} ${question.explain}`;
+  $('#quizHint').textContent = isCorrect ? 'Great job — keep going.' : 'Review the explanation, then continue.';
+  $('#nextQuestion').disabled = false;
+}
+function finishQuiz() {
+  $('#questionArea').hidden = true;
+  $('#quizResult').hidden = false;
+  $('#questionCounter').textContent = 'ROUND COMPLETE';
+  $('#quizProgress').style.width = '100%';
+  $('#resultScore').textContent = `${score}/${quizData[selectedSubject].length}`;
+  const percent = score / quizData[selectedSubject].length;
+  $('#resultTitle').textContent = percent === 1 ? 'Excellent work!' : percent >= .6 ? 'Nice work!' : 'Good start!';
+  $('#resultDescription').textContent = percent >= .8 ? 'You have a good grip on these basics. Try another subject to keep learning.' : 'Review the explanations and try again. Every attempt helps build confidence.';
+}
+function startQuiz(subject = selectedSubject) {
+  selectedSubject = subject;
+  questionIndex = 0;
+  score = 0;
+  $$('.subject-option').forEach(button => button.classList.toggle('selected', button.dataset.subject === subject));
+  renderQuestion();
+}
+$$('.subject-option').forEach(button => button.addEventListener('click', () => startQuiz(button.dataset.subject)));
+$('#nextQuestion').addEventListener('click', () => {
+  if (!answered) return;
+  if (questionIndex < quizData[selectedSubject].length - 1) {
+    questionIndex++;
+    renderQuestion();
+  } else finishQuiz();
+});
+$('#restartQuiz').addEventListener('click', () => startQuiz(selectedSubject));
+startQuiz('Basics');
+
+// Project catalogue filters and detail views
+let showAllProjects = false;
+function applyProjectFilter(filter = 'All') {
+  const grid = $('#projectGrid');
+  let visibleCount = 0;
+  $$('.project-card', grid).forEach(card => {
+    const categories = card.dataset.categories.split(' ');
+    const matches = filter === 'All' || categories.includes(filter);
+    const extraHidden = card.classList.contains('extra-project') && !showAllProjects && filter === 'All';
+    const visible = matches && !extraHidden;
+    card.hidden = !visible;
+    if (visible) visibleCount++;
+  });
+  $('#projectEmpty').hidden = visibleCount !== 0;
+  $$('.filter-chip').forEach(button => button.classList.toggle('active', button.dataset.filter === filter));
+}
+$$('.filter-chip').forEach(button => button.addEventListener('click', () => {
+  if (button.dataset.filter !== 'All') showAllProjects = true;
+  applyProjectFilter(button.dataset.filter);
+}));
+$('#viewAllProjects').addEventListener('click', (event) => {
+  event.preventDefault();
+  showAllProjects = !showAllProjects;
+  if (showAllProjects) {
+    $$('.filter-chip').forEach(button => button.classList.toggle('active', button.dataset.filter === 'All'));
+    applyProjectFilter('All');
+    $('#viewAllProjects').innerHTML = 'Show featured only <span>↑</span>';
+  } else {
+    applyProjectFilter('All');
+    $('#viewAllProjects').innerHTML = 'View all projects <span>↗</span>';
+  }
+});
+function openProject(projectId) {
+  const project = projectInfo[projectId];
+  if (!project) return;
+  activeProject = project;
+  $('#projectModalTitle').textContent = project.title;
+  $('#detailLevel').textContent = project.level;
+  $('#detailLevel').className = `level ${project.level === 'BEGINNER' ? 'beginner' : 'intermediate'}`;
+  $('#detailCategory').textContent = project.category.toUpperCase();
+  $('#detailDescription').textContent = project.description;
+  $('#detailWorking').textContent = project.working;
+  $('#detailTip').textContent = project.tip;
+  const list = $('#detailComponents');
+  list.replaceChildren();
+  project.components.forEach(item => {
+    const li = document.createElement('li');
+    li.textContent = item;
+    list.appendChild(li);
+  });
+  $('#detailArt').innerHTML = '<span>eS</span>';
+  openModal('projectModal');
+}
+$$('[data-open-project]').forEach(button => button.addEventListener('click', () => openProject(button.dataset.openProject)));
+$$('.project-card').forEach(card => card.addEventListener('click', event => {
+  if (event.target.closest('button')) return;
+  openProject(card.dataset.project);
+}));
+$('#askProjectAI').addEventListener('click', () => {
+  if (!activeProject) return;
+  const prompt = `Explain how to build the ${activeProject.title} project step by step, including key wiring precautions.`;
+  closeModal('projectModal');
+  $('#chatInput').value = prompt;
+  document.getElementById('ai').scrollIntoView({ behavior: 'smooth' });
+  setTimeout(() => $('#chatInput').focus(), 450);
+});
+
+// Study assistant: demo responses when no secure AI endpoint is configured.
+function demoAnswer(message) {
+  const text = message.toLowerCase();
+  if (/ohm|resistance|current|voltage/.test(text)) return 'Ohm’s law states that V = I × R, where V is voltage in volts, I is current in amperes, and R is resistance in ohms.\n\nExample: a 100 Ω resistor connected across 5 V draws I = V/R = 5/100 = 0.05 A (50 mA), assuming the source can supply that current. In a real circuit, also check component power ratings.';
+  if (/esp32|arduino|microcontroller|gpio|firmware/.test(text)) return 'A microcontroller is a small computer on a chip that reads inputs, runs a program, and controls outputs. Arduino is a popular development platform; ESP32 boards commonly add Wi-Fi and Bluetooth.\n\nFor a project, check the board’s operating voltage, pin limits, GPIO mapping, and sensor signal levels before wiring. Many ESP32 pins are 3.3 V logic and are not 5 V tolerant.';
+  if (/analog|digital|signal/.test(text)) return 'An analog signal can vary continuously over a range, like the voltage from a microphone. A digital signal represents information using discrete levels, often 0 and 1.\n\nExample: a potentiometer can provide an analog voltage that an ADC reads as a number, while a push-button is often read as a digital HIGH/LOW input. Real hardware may need filtering or debouncing.';
+  if (/diode|led|rectif/.test(text)) return 'A diode is a semiconductor device that conducts much more readily in forward bias than reverse bias. A rectifier uses diodes (or controlled devices such as SCRs) to convert AC into a unidirectional output.\n\nAn LED emits light when forward biased. Use a current-limiting resistor or suitable current driver, and check the datasheet for current and voltage ratings.';
+  if (/sensor|iot|mqtt|cloud/.test(text)) return 'In an IoT system, a sensor measures a physical quantity, a controller processes the data, and a network sends information to an app, server, or dashboard. MQTT is a lightweight publish/subscribe messaging protocol often used for device-to-cloud messages.\n\nA good design checks supply voltage, data interface, Wi-Fi availability, security, and what should happen when the network disconnects.';
+  if (/modulation|am|fm|antenna|communication/.test(text)) return 'Modulation carries information by varying a carrier signal. In AM (amplitude modulation), carrier amplitude varies with the message. In FM (frequency modulation), carrier frequency varies. An antenna radiates or receives electromagnetic waves.\n\nA useful exam answer includes the definition, simple block diagram, working principle, and one application.';
+  if (/project|step by step|build/.test(text)) return 'A useful project workflow is: (1) define what the circuit must do, (2) draw the block diagram, (3) list components and check datasheets, (4) build and test one block at a time, (5) record readings, and (6) document limitations.\n\nStart with a current-limited, low-voltage supply. Check every component’s voltage/current ratings before powering the circuit. Tell me your exact project and board for more focused guidance.';
+  if (/exam|viva|study|prepare|answer/.test(text)) return 'For an ENTC viva, prepare each topic in this order: a one- or two-line definition, a labelled diagram, working principle, key formula or characteristic, and one practical application. Practise explaining the idea aloud in simple words.\n\nShare the exact topic or question and I’ll help you structure an exam-ready answer. This built-in demo uses prepared study guidance; connect a secure AI backend for open-ended live answers.';
+  return 'I can help with basic electronics, digital logic, microcontrollers, sensors, IoT, and communication concepts. Try asking: “Explain Ohm’s law with an example”, “What is an ESP32?”, or “Explain analog vs digital signals”.\n\nThis is the built-in demo assistant, so its answers are topic-based examples rather than a live AI model. For conversational AI, configure AI_API_URL to your secure backend.';
+}
+function appendChatMessage(role, text) {
+  const row = document.createElement('div');
+  row.className = `chat-message ${role}`;
+  if (role === 'assistant') {
+    const avatar = document.createElement('span');
+    avatar.className = 'message-avatar';
+    avatar.textContent = 'eS';
+    row.appendChild(avatar);
+  }
+  const bubble = document.createElement('div');
+  bubble.className = 'message-bubble';
+  const label = document.createElement('small');
+  label.textContent = role === 'assistant' ? 'SATHI AI' : 'YOU';
+  const p = document.createElement('p');
+  p.textContent = text;
+  bubble.append(label, p);
+  row.appendChild(bubble);
+  $('#chatMessages').appendChild(row);
+  $('#chatMessages').scrollTop = $('#chatMessages').scrollHeight;
+  return row;
+}
+async function getAssistantReply(message) {
+  if (!AI_API_URL.trim()) {
+    await new Promise(resolve => setTimeout(resolve, 380));
+    return demoAnswer(message);
+  }
+  const response = await fetch(AI_API_URL, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ message, history: chatHistory.slice(-8) }),
+  });
+  if (!response.ok) throw new Error(`AI service returned ${response.status}`);
+  const data = await response.json();
+  if (typeof data.reply !== 'string' || !data.reply.trim()) throw new Error('AI service response must contain a non-empty "reply" field.');
+  return data.reply.trim();
+}
+async function submitChatMessage(message) {
+  const trimmed = message.trim();
+  if (!trimmed) return;
+  appendChatMessage('user', trimmed);
+  chatHistory.push({ role: 'user', content: trimmed });
+  $('#chatInput').value = '';
+  $('#sendMessage').disabled = true;
+  const typing = appendChatMessage('assistant', 'Thinking through your question…');
+  $('p', typing).classList.add('typing-text');
+  try {
+    const reply = await getAssistantReply(trimmed);
+    $('p', typing).textContent = reply;
+    $('p', typing).classList.remove('typing-text');
+    chatHistory.push({ role: 'assistant', content: reply });
+  } catch (error) {
+    $('p', typing).textContent = 'I could not reach the AI service. The website is still working in demo mode; check the AI endpoint URL and backend logs, then try again.';
+    $('p', typing).classList.remove('typing-text');
+    console.error('Study assistant error:', error);
+  } finally {
+    $('#sendMessage').disabled = false;
+    $('#chatInput').focus();
+    $('#chatMessages').scrollTop = $('#chatMessages').scrollHeight;
+  }
+}
+$('#chatForm').addEventListener('submit', event => {
+  event.preventDefault();
+  submitChatMessage($('#chatInput').value);
+});
+$$('.suggestion-chip').forEach(button => button.addEventListener('click', () => submitChatMessage(button.dataset.prompt)));
+if (AI_API_URL.trim()) {
+  $('#aiModeIndicator').classList.add('connected');
+  $('#aiModeText').textContent = 'Live AI endpoint configured. Responses are handled by your backend service.';
+}
+
+// Optional Supabase Auth. When not configured, no credentials are stored locally.
+async function initializeSupabase() {
+  if (!SUPABASE_URL.trim() || !SUPABASE_ANON_KEY.trim()) return;
+  try {
+    const { createClient } = await import('https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm');
+    supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+    const { data } = await supabase.auth.getSession();
+    authSession = data.session;
+    updateAuthButton();
+    supabase.auth.onAuthStateChange((_event, session) => {
+      authSession = session;
+      updateAuthButton();
+    });
+  } catch (error) {
+    console.error('Could not initialise account service:', error);
+    $('#authMessage').textContent = 'Account service could not be reached. Check the Supabase URL, key, and network connection.';
+  }
+}
+function updateAuthButton() {
+  $('#authButtonText').textContent = authSession?.user?.email ? 'Account' : 'Login';
+  $('#openAuth').title = authSession?.user?.email ? authSession.user.email : 'Login or create an account';
+}
+function setAuthMode(mode) {
+  authMode = mode;
+  $$('.auth-tab').forEach(tab => tab.classList.toggle('active', tab.dataset.authMode === mode));
+  const signup = mode === 'signup';
+  $('#authTitle').textContent = signup ? 'Create your account' : 'Welcome back';
+  $('#authIntro').textContent = signup ? 'Save your learning journey and pick up where you left off.' : 'Sign in to continue your electronics learning journey.';
+  $('#authName').hidden = !signup;
+  $('#authNameLabel').hidden = !signup;
+  $('#authName').required = signup;
+  $('#authPassword').autocomplete = signup ? 'new-password' : 'current-password';
+  $('#authSubmit').innerHTML = signup ? 'Create account <span>→</span>' : 'Login securely <span>→</span>';
+  $('#authMessage').textContent = '';
+}
+$('#openAuth').addEventListener('click', async () => {
+  if (authSession?.user) {
+    const confirmed = window.confirm(`Signed in as ${authSession.user.email}. Sign out?`);
+    if (confirmed && supabase) {
+      const { error } = await supabase.auth.signOut();
+      if (error) showToast('Could not sign out. Please try again.');
+      else showToast('You have been signed out.');
+    }
+    return;
+  }
+  setAuthMode('login');
+  openModal('authModal');
+});
+$$('.auth-tab').forEach(tab => tab.addEventListener('click', () => setAuthMode(tab.dataset.authMode)));
+$('#authForm').addEventListener('submit', async event => {
+  event.preventDefault();
+  const email = $('#authEmail').value.trim();
+  const password = $('#authPassword').value;
+  const name = $('#authName').value.trim();
+  const message = $('#authMessage');
+  if (!supabase) {
+    message.textContent = 'Secure login is not configured yet. Add your Supabase project URL and publishable anon key in app.js, then enable Email Auth in Supabase. You can use guest mode while testing.';
+    return;
+  }
+  $('#authSubmit').disabled = true;
+  $('#authSubmit').textContent = authMode === 'signup' ? 'Creating account…' : 'Signing in…';
+  message.textContent = '';
+  try {
+    if (authMode === 'signup') {
+      const { data, error } = await supabase.auth.signUp({ email, password, options: { data: { full_name: name } } });
+      if (error) throw error;
+      if (!data.session) {
+        message.style.color = '#16785f';
+        message.textContent = 'Account created. Check your email for a confirmation link, then return to login.';
+      } else {
+        closeModal('authModal');
+        showToast('Account created successfully.');
+      }
+    } else {
+      const { error } = await supabase.auth.signInWithPassword({ email, password });
+      if (error) throw error;
+      closeModal('authModal');
+      showToast('Welcome back to Electronic Sathi.');
+    }
+  } catch (error) {
+    message.style.color = '#b44a4a';
+    message.textContent = error?.message || 'Authentication failed. Check your details and try again.';
+  } finally {
+    $('#authSubmit').disabled = false;
+    $('#authSubmit').innerHTML = authMode === 'signup' ? 'Create account <span>→</span>' : 'Login securely <span>→</span>';
+  }
+});
+$('#continueGuest').addEventListener('click', () => {
+  closeModal('authModal');
+  showToast('Guest mode enabled on this device.');
+  $('#authButtonText').textContent = 'Guest mode';
+});
+
+// Modal close behaviours and escape key
+$$('[data-close-modal]').forEach(button => button.addEventListener('click', () => closeModal(button.dataset.closeModal)));
+$$('.modal-backdrop').forEach(backdrop => backdrop.addEventListener('click', event => {
+  if (event.target === backdrop) closeModal(backdrop.id);
+}));
+document.addEventListener('keydown', event => {
+  if (event.key === 'Escape') $$('.modal-backdrop:not([hidden])').forEach(modal => closeModal(modal.id));
+});
+
+// Lightweight active navigation indication for desktop and mobile.
+const sections = ['home', 'viva', 'projects', 'ai'].map(id => document.getElementById(id));
+if ('IntersectionObserver' in window) {
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      $$('.nav-link').forEach(link => link.classList.toggle('active', link.getAttribute('href') === `#${entry.target.id}`));
+    });
+  }, { rootMargin: '-30% 0px -60% 0px' });
+  sections.forEach(section => observer.observe(section));
+}
+$('#currentYear').textContent = new Date().getFullYear();
+applyProjectFilter('All');
+initializeSupabase();
+
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#home" aria-label="Electronic Sathi home">
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M6 20h7l4-8 7 16 4-8h6"/><circle cx="6" cy="20" r="2"/><circle cx="34" cy="20" r="2"/></svg></span>
+        <span class="brand-copy"><strong>Electronic <em>Sathi</em></strong><small>Learn · Build · Succeed</small></span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#viva" class="nav-link">Viva Practice</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#ai" class="nav-link">AI Study Buddy</a>
+        <button class="nav-login" id="openAuth"><span class="user-icon">◉</span><span id="authButtonText">Login</span></button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero section" id="home">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="eyebrow-dot"></span> YOUR ELECTRONICS LEARNING PARTNER</div>
+          <h1>Make electronics<br />feel <span>easy.</span></h1>
+          <p class="hero-lead">One place for ENTC students to prepare for viva, explore practical projects, and learn concepts with confidence.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#viva">Start Viva Practice <span aria-hidden="true">↗</span></a>
+            <a class="btn btn-secondary" href="#projects">Explore Projects <span aria-hidden="true">→</span></a>
+          </div>
+          <div class="hero-proof"><div class="avatar-stack"><span>E</span><span>π</span><span>Ω</span></div><p><strong>Built for curious minds</strong><br /><span>From first circuit to final-year project</span></p></div>
+        </div>
+        <div class="hero-art" aria-label="Illustration of an electronics circuit board">
+          <div class="art-glow"></div>
+          <div class="art-chip chip-main"><span class="chip-label">ES · 32</span><div class="chip-core"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><span class="chip-caption">LEARN / BUILD</span></div>
+          <div class="art-chip chip-small chip-one"><span class="mini-wave">∿ ∿ ∿</span><small>SIGNAL</small></div>
+          <div class="art-chip chip-small chip-two"><span class="mini-resistor">━▰━</span><small>RESISTOR</small></div>
+          <div class="art-node node-a"></div><div class="art-node node-b"></div><div class="art-node node-c"></div>
+          <svg class="circuit-lines" viewBox="0 0 520 430" fill="none" aria-hidden="true"><path d="M72 132H129V181H161M350 125H408V84H458M344 280H403V326H475M129 306H76V352H32M401 211H469V176H500M220 83V43H267M180 352V391H245"/><path d="M91 222H42V187H20M323 57H362V28H403"/><circle cx="72" cy="132" r="4"/><circle cx="458" cy="84" r="4"/><circle cx="475" cy="326" r="4"/><circle cx="32" cy="352" r="4"/><circle cx="500" cy="176" r="4"/><circle cx="403" cy="28" r="4"/></svg>
+          <div class="float-pill float-viva"><span class="float-icon">✓</span><span><b>Viva ready</b><small>Practice at your pace</small></span></div>
+          <div class="float-pill float-project"><span class="float-icon blue">⌘</span><span><b>Build something</b><small>Ideas into prototypes</small></span></div>
+          <div class="art-bottom-note"><span class="signal-dot"></span> CONNECT · CREATE · DISCOVER</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="quick-stats" aria-label="Website features">
+      <div class="container stats-grid">
+        <div class="stat-item"><span class="stat-icon">⌁</span><div><strong>Viva Practice</strong><small>Test your understanding</small></div></div>
+        <div class="stat-item"><span class="stat-icon">⌘</span><div><strong>Project Ideas</strong><small>Plan your next build</small></div></div>
+        <div class="stat-item"><span class="stat-icon">✦</span><div><strong>AI Study Buddy</strong><small>Get concept support</small></div></div>
+        <div class="stat-item"><span class="stat-icon">◎</span><div><strong>Learn Anywhere</strong><small>Desktop and mobile</small></div></div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="viva">
+      <div class="container">
+        <div class="section-heading">
+          <div><div class="eyebrow">PREPARE WITH PURPOSE</div><h2>Viva practice, <span>made simple.</span></h2><p>Choose a subject, answer questions, and check your understanding instantly.</p></div>
+          <div class="heading-tag"><span class="tag-dot"></span> QUICK PRACTICE</div>
+        </div>
+        <div class="viva-layout">
+          <aside class="viva-sidebar card-panel">
+            <h3>Choose a subject</h3>
+            <p class="small-muted">Pick a topic to begin your practice.</p>
+            <div class="subject-list" id="subjectList">
+              <button class="subject-option selected" data-subject="Basics"><span class="subject-symbol">Ω</span><span><b>Basic Electronics</b><small>Components & circuits</small></span><span class="subject-arrow">→</span></button>
+              <button class="subject-option" data-subject="Digital"><span class="subject-symbol">▦</span><span><b>Digital Electronics</b><small>Logic & number systems</small></span><span class="subject-arrow">→</span></button>
+              <button class="subject-option" data-subject="Microcontrollers"><span class="subject-symbol">▣</span><span><b>Microcontrollers</b><small>Arduino, ESP32 & more</small></span><span class="subject-arrow">→</span></button>
+              <button class="subject-option" data-subject="Communication"><span class="subject-symbol">⌁</span><span><b>Communication</b><small>Signals & modulation</small></span><span class="subject-arrow">→</span></button>
+              <button class="subject-option" data-subject="IoT"><span class="subject-symbol">◌</span><span><b>IoT Fundamentals</b><small>Sensors & networking</small></span><span class="subject-arrow">→</span></button>
+            </div>
+            <div class="sidebar-tip"><span>✦</span><p><b>Study tip</b><br />Try answering before you reveal the correct option.</p></div>
+          </aside>
+          <div class="quiz-panel card-panel" id="quizPanel">
+            <div class="quiz-topline"><span class="quiz-label"><span class="live-dot"></span> PRACTICE MODE</span><span class="question-counter" id="questionCounter">QUESTION 01 / 05</span></div>
+            <div class="progress-track"><span id="quizProgress" style="width:20%"></span></div>
+            <div class="question-area" id="questionArea">
+              <span class="question-topic" id="questionTopic">BASIC ELECTRONICS</span>
+              <h3 id="questionText">What is the main function of a resistor in a circuit?</h3>
+              <div class="answer-list" id="answerList"></div>
+              <div class="answer-feedback" id="answerFeedback" aria-live="polite" hidden></div>
+            </div>
+            <div class="quiz-footer"><span id="quizHint">Select one answer to check your knowledge.</span><button class="btn btn-primary btn-small" id="nextQuestion" disabled>Next Question <span>→</span></button></div>
+            <div class="quiz-result" id="quizResult" hidden><div class="result-medal">✦</div><p class="eyebrow">PRACTICE COMPLETE</p><h3 id="resultTitle">Nice work!</h3><p id="resultDescription">You completed this practice round.</p><div class="result-score"><strong id="resultScore">0/5</strong><span>correct answers</span></div><button class="btn btn-primary" id="restartQuiz">Practise Again <span>↻</span></button></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-heading project-heading">
+          <div><div class="eyebrow">LEARN BY DOING</div><h2>Find your next <span>project.</span></h2><p>Practical ideas to explore sensors, microcontrollers, and connected devices.</p></div>
+          <a class="text-link" href="#all-projects" id="viewAllProjects">View all projects <span>↗</span></a>
+        </div>
+        <div class="project-filters" id="projectFilters" aria-label="Filter projects">
+          <button class="filter-chip active" data-filter="All">All projects <span>6</span></button>
+          <button class="filter-chip" data-filter="Arduino">Arduino</button>
+          <button class="filter-chip" data-filter="ESP32">ESP32 / IoT</button>
+          <button class="filter-chip" data-filter="Sensors">Sensors</button>
+          <button class="filter-chip" data-filter="Beginner">Beginner friendly</button>
+        </div>
+        <div class="project-grid" id="projectGrid">
+          <article class="project-card" data-categories="Arduino Sensors Beginner" data-project="smart-plant"><div class="project-visual visual-plant"><div class="visual-sun"></div><div class="plant-pot"><span class="plant-stem"></span><i></i><b></b></div><div class="sensor-tag">SOIL SENSOR</div></div><div class="project-content"><div class="card-meta"><span class="level beginner">BEGINNER</span><span>01 / SENSORS</span></div><h3>Smart Plant Monitoring</h3><p>Monitor soil moisture and know when your plant needs water.</p><div class="project-bottom"><span>Arduino · Moisture sensor</span><button class="round-arrow" data-open-project="smart-plant" aria-label="View Smart Plant Monitoring details">↗</button></div></div></article>
+          <article class="project-card" data-categories="ESP32 Sensors" data-project="air-quality"><div class="project-visual visual-air"><div class="air-orb orb-a"></div><div class="air-orb orb-b"></div><div class="air-device"><span>eS</span><i></i><small>AIR / OK</small></div><div class="air-wave wave-a"></div><div class="air-wave wave-b"></div></div><div class="project-content"><div class="card-meta"><span class="level intermediate">INTERMEDIATE</span><span>02 / IoT</span></div><h3>IoT Air Quality Monitor</h3><p>Read air-quality sensor data and display it on a dashboard.</p><div class="project-bottom"><span>ESP32 · Gas sensor</span><button class="round-arrow" data-open-project="air-quality" aria-label="View IoT Air Quality Monitor details">↗</button></div></div></article>
+          <article class="project-card" data-categories="Arduino Sensors Beginner" data-project="distance-alert"><div class="project-visual visual-distance"><div class="radar-grid"></div><div class="radar-sweep"></div><div class="radar-target target-a"></div><div class="radar-target target-b"></div><div class="distance-readout"><small>DISTANCE</small><b>24 <small>cm</small></b></div></div><div class="project-content"><div class="card-meta"><span class="level beginner">BEGINNER</span><span>03 / EMBEDDED</span></div><h3>Ultrasonic Distance Alert</h3><p>Measure distance and trigger an LED or buzzer near an object.</p><div class="project-bottom"><span>Arduino · HC-SR04</span><button class="round-arrow" data-open-project="distance-alert" aria-label="View Ultrasonic Distance Alert details">↗</button></div></div></article>
+          <article class="project-card extra-project" data-categories="ESP32 Sensors" data-project="smart-door"><div class="project-visual visual-door"><div class="door-frame"><div class="door-panel"><span class="door-knob"></span><span class="wifi-mark">⌁</span></div></div><div class="door-status">ACCESS READY</div></div><div class="project-content"><div class="card-meta"><span class="level intermediate">INTERMEDIATE</span><span>04 / IoT</span></div><h3>Wi-Fi Smart Door Alert</h3><p>Send a notification when a magnetic door sensor changes state.</p><div class="project-bottom"><span>ESP32 · Reed switch</span><button class="round-arrow" data-open-project="smart-door" aria-label="View Wi-Fi Smart Door Alert details">↗</button></div></div></article>
+          <article class="project-card extra-project" data-categories="Arduino Beginner" data-project="led-pattern"><div class="project-visual visual-led"><div class="led-board"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><div class="board-traces"></div><div class="board-caption">SEQUENCE_01</div></div><div class="project-content"><div class="card-meta"><span class="level beginner">BEGINNER</span><span>05 / DIGITAL</span></div><h3>Programmable LED Patterns</h3><p>Learn output pins, timing delays, and basic embedded logic.</p><div class="project-bottom"><span>Arduino · LEDs</span><button class="round-arrow" data-open-project="led-pattern" aria-label="View Programmable LED Patterns details">↗</button></div></div></article>
+          <article class="project-card extra-project" data-categories="ESP32 Sensors" data-project="weather-station"><div class="project-visual visual-weather"><div class="weather-sun"></div><div class="weather-cloud cloud-a"></div><div class="weather-cloud cloud-b"></div><div class="weather-screen"><small>LIVE DATA</small><b>27°</b><span>HUMIDITY 62%</span></div></div><div class="project-content"><div class="card-meta"><span class="level intermediate">INTERMEDIATE</span><span>06 / IoT</span></div><h3>Connected Weather Station</h3><p>Collect temperature and humidity and publish readings online.</p><div class="project-bottom"><span>ESP32 · DHT sensor</span><button class="round-arrow" data-open-project="weather-station" aria-label="View Connected Weather Station details">↗</button></div></div></article>
+        </div>
+        <div class="project-empty" id="projectEmpty" hidden>No projects match this filter yet.</div>
+        <div class="section-bottom-note"><span class="bulb-icon">✦</span> Project reminder: check component voltage/current ratings and follow safe power-supply practices before building a circuit.</div>
+      </div>
+    </section>
+
+    <section class="section ai-section" id="ai">
+      <div class="container ai-grid">
+        <div class="ai-copy"><div class="eyebrow">YOUR PERSONAL STUDY PARTNER</div><h2>Stuck on a concept?<br /><span>Ask Sathi.</span></h2><p>Ask electronics questions in simple language. Start with a suggested topic or type your own question.</p><div class="ai-benefits"><div><span>✓</span> Simple, student-friendly explanations</div><div><span>✓</span> Examples from circuits and projects</div><div><span>✓</span> Follow-up questions welcome</div></div><div class="ai-mode-note"><span class="mode-indicator" id="aiModeIndicator"></span><span id="aiModeText">Study demo is active. Connect a secure AI endpoint for live AI responses.</span></div></div>
+        <div class="chat-card">
+          <div class="chat-header"><div class="chat-avatar">eS<span>✦</span></div><div class="chat-header-copy"><b>Sathi AI</b><small><span class="online-dot"></span> Electronics study assistant</small></div><span class="chat-header-badge">BETA</span></div>
+          <div class="chat-messages" id="chatMessages" aria-live="polite"><div class="chat-message assistant"><span class="message-avatar">eS</span><div class="message-bubble"><small>SATHI AI</small><p>Hi there! 👋 I can help you revise electronics concepts. Ask me about Ohm’s law, diodes, ESP32, sensors, or communication systems.</p></div></div></div>
+          <div class="suggestion-row"><button class="suggestion-chip" data-prompt="Explain Ohm's law with an example">Ohm’s law</button><button class="suggestion-chip" data-prompt="What is an ESP32 and where is it used?">ESP32</button><button class="suggestion-chip" data-prompt="Explain the difference between analog and digital signals">Analog vs digital</button></div>
+          <form class="chat-input-row" id="chatForm"><label class="sr-only" for="chatInput">Ask Sathi AI a question</label><input type="text" id="chatInput" placeholder="Ask an electronics question..." autocomplete="off" maxlength="500" required /><button type="submit" aria-label="Send message" id="sendMessage"><span>↑</span></button></form>
+          <p class="chat-disclaimer">Use AI as a study helper. Verify critical circuit designs and safety decisions.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta"><div class="container cta-inner"><div class="cta-decoration" aria-hidden="true">⌁</div><div><div class="eyebrow">YOUR NEXT STEP STARTS HERE</div><h2>Learn a little. Build a lot.</h2><p>Pick a question, start a project, and keep moving forward.</p></div><a class="btn btn-white" href="#viva">Start learning <span>↗</span></a></div></section>
+  </main>
+
+  <footer class="site-footer"><div class="container footer-top"><a class="brand footer-brand" href="#home"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M6 20h7l4-8 7 16 4-8h6"/><circle cx="6" cy="20" r="2"/><circle cx="34" cy="20" r="2"/></svg></span><span class="brand-copy"><strong>Electronic <em>Sathi</em></strong><small>Learn · Build · Succeed</small></span></a><p>Made for the next generation of electronics engineers.</p><div class="footer-links"><a href="#viva">Viva</a><a href="#projects">Projects</a><a href="#ai">AI Study Buddy</a></div></div><div class="container footer-bottom"><span>© <span id="currentYear">2026</span> Electronic Sathi</span><span>Made BY R@hul  <span class="heart">♥</span> for learners</span></div></footer>
+
+  <div class="modal-backdrop" id="authModal" hidden role="dialog" aria-modal="true" aria-labelledby="authTitle"><div class="modal-card auth-card"><button class="modal-close" data-close-modal="authModal" aria-label="Close login dialog">×</button><div class="modal-brand"><span class="brand-mark"><svg viewBox="0 0 40 40"><path d="M6 20h7l4-8 7 16 4-8h6"/><circle cx="6" cy="20" r="2"/><circle cx="34" cy="20" r="2"/></svg></span></div><p class="eyebrow">WELCOME TO YOUR LEARNING SPACE</p><h2 id="authTitle">Welcome back</h2><p class="modal-intro" id="authIntro">Sign in to continue your electronics learning journey.</p><div class="auth-tabs"><button class="auth-tab active" data-auth-mode="login">Login</button><button class="auth-tab" data-auth-mode="signup">Create account</button></div><form id="authForm"><label for="authName" id="authNameLabel" hidden>Your name</label><input type="text" id="authName" placeholder="Your name" autocomplete="name" hidden /><label for="authEmail">Email address</label><input type="email" id="authEmail" placeholder="you@example.com" autocomplete="email" required /><label for="authPassword">Password</label><input type="password" id="authPassword" placeholder="At least 6 characters" autocomplete="current-password" minlength="6" required /><p class="auth-message" id="authMessage" aria-live="polite"></p><button class="btn btn-primary auth-submit" type="submit" id="authSubmit">Login securely <span>→</span></button></form><div class="auth-divider"><span>OR</span></div><button class="btn btn-secondary guest-button" id="continueGuest">Continue as guest <span>→</span></button><p class="auth-footnote">Secure accounts require Supabase setup. Guest mode is for trying this demo on your device.</p></div></div>
+
+  <div class="modal-backdrop" id="projectModal" hidden role="dialog" aria-modal="true" aria-labelledby="projectModalTitle"><div class="modal-card project-detail-card"><button class="modal-close" data-close-modal="projectModal" aria-label="Close project details">×</button><div class="detail-art" id="detailArt"><span>eS</span></div><div class="detail-body"><div class="card-meta"><span class="level beginner" id="detailLevel">BEGINNER</span><span id="detailCategory">PROJECT GUIDE</span></div><h2 id="projectModalTitle">Project title</h2><p id="detailDescription"></p><div class="detail-columns"><div><h3><span>01</span> Components required</h3><ul id="detailComponents"></ul></div><div><h3><span>02</span> How it works</h3><p id="detailWorking"></p></div></div><div class="detail-note"><span>✦</span><p><b>Build tip</b><br /><span id="detailTip"></span></p></div><button class="btn btn-primary" id="askProjectAI">Ask Sathi about this project <span>↗</span></button></div></div></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
